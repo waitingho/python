@@ -1,5 +1,5 @@
 import scrapy
-
+G
 class HelloSpider(scrapy.Spider):
     name = "Test"
 
@@ -26,4 +26,4 @@ class HelloSpider(scrapy.Spider):
 
 
 
-
+print('test')
