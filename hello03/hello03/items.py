@@ -8,12 +8,7 @@
 import scrapy
 
 
-class Testltem(scrapy.Item):
+class Hello03Item(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    # pass
-    title = scrapy.Field()
-    link  = scrapy.Field()
-    price = scrapy.Field()
-    
-
+    pass

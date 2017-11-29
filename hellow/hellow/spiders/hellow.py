@@ -1,7 +1,7 @@
 import scrapy
 
 class PCHomeSpider(scrapy.Spider):
-    name = "hello"
+    name = "hellow"
 
     def start_requests(self):
         urls = [
@@ -17,7 +17,6 @@ class PCHomeSpider(scrapy.Spider):
         filename = 'pchome-%s.html' % page
         with open(filename, 'wb', encoding='utf-8') as f:
             f.write(response.body)
-        self.log('Saved file %s' % filename)
 
     def parse_2(self, response):
         print('')

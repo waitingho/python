@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for hello2 project
+# Scrapy settings for hello02 project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'hello2'
+BOT_NAME = 'hello02'
 
-SPIDER_MODULES = ['hello2.spiders']
-NEWSPIDER_MODULE = 'hello2.spiders'
+SPIDER_MODULES = ['hello02.spiders']
+NEWSPIDER_MODULE = 'hello02.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'hello2 (+http://www.yourdomain.com)'
+#USER_AGENT = 'hello02 (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'hello2.middlewares.Hello2SpiderMiddleware': 543,
+#    'hello02.middlewares.Hello02SpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'hello2.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'hello02.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,10 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-    ITEM_PIPELINES = {
-   'Test.pipelines.JsonWithEncodingPipeline': 300,
-}
-
+#    'hello02.pipelines.Hello02Pipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
