@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for Mobile01 project
+# Scrapy settings for AppleSearch project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,15 +9,16 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'Mobile01'
+BOT_NAME = 'AppleSearch'
 
-SPIDER_MODULES = ['Mobile01.spiders']
-NEWSPIDER_MODULE = 'Mobile01.spiders'
+SPIDER_MODULES = ['AppleSearch.spiders']
+NEWSPIDER_MODULE = 'AppleSearch.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'Mobile01 (+http://www.yourdomain.com)'
+#USER_AGENT = 'AppleSearch (+http://www.yourdomain.com)'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
@@ -47,13 +48,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'Mobile01.middlewares.Mobile01SpiderMiddleware': 543,
+#    'AppleSearch.middlewares.ApplesearchSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'Mobile01.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'AppleSearch.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,10 +65,12 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
+#ITEM_PIPELINES = {
+#    'AppleSearch.pipelines.ApplesearchPipeline': 300,
+#}
 ITEM_PIPELINES = {
-    'Mobile01.pipelines.JsonWithEncodingPipeline': 300,
+    'AppleSearch.pipelines.JsonWithEncodingPipeline': 300,
 }
-
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

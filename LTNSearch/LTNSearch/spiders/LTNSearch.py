@@ -49,7 +49,10 @@ class LTNSearch(scrapy.Spider):
             urlList = response.xpath(str_xpath)[0].extract()
             strUrl = ''.join(urlList)
             strUrl = 'http://news.ltn.com.tw'+strUrl
-            str_xpath = '//*[@id="newslistul"]/li['+str_idx+']/div//text()'
+            #//*[@id="newslistul"]/li[2]/a[2]
+            #//*[@id="newslistul"]/li[2]/p/text()[1]
+            #//*[@id="newslistul"]/li[1]/a[2]
+            str_xpath = '//*[@id="newslistul"]/li['+str_idx+']/p//text()'
             bodyList = response.xpath(str_xpath).extract()
             strBody = ''.join(bodyList)
             str_xpath = '//*[@id="newslistul"]/li['+str_idx+']/span//text()'

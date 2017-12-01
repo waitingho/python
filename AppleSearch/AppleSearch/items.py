@@ -8,10 +8,12 @@
 import scrapy
 
 
-class Mobile01Item(scrapy.Item):
+class ApplesearchItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     #pass
-    title = scrapy.Field()
-    link  = scrapy.Field()
-    
+	title = scrapy.Field()
+	link = scrapy.Field()
+	body = scrapy.Field()
+	postdate = scrapy.Field()
+
