@@ -14,10 +14,19 @@ class PCHomeSpider(scrapy.Spider):
     def parse(self, response):
         #//*[@id="hot_list"]/dl/dd[2]/ul/li[1]/div/h5/a
         #for i in range(5):
-        titleList = response.xpath('//*[@id="hot_list"]/dl/dd[2]/ul/li[1]/div/h5/a//text').extract()
-        strTitle  = ''.join(title)
+        titleList = response.xpath('//*[@id="hot_list"]/dl/dd[2]/ul/li[1]/div/h5/a//text()').extract()
+        strTitle  = ''.join(titleList)
+                    #'//*[@id="hot_list"]/dl/dd[2]/ul/li[1]/div/h5/a//text'
+        #str_xpath = '//*[@id="hot_list"]/dl/dd[2]/ul/li[1]/div/h5/a//text()'
+        #titleList = response.xpath('//*[@id="hot_list"]/dl/dd[2]/ul/li[1]/div/h5/a//text()').extract()
+        #strTitle = ''.join(titleList)
+
+        #str_xpath = '//*[@id="hot_list"]/dl/dd[2]/ul/li[1]/div/h5/a//@href'
+        #urlList = response.xpath(str_xpath)[0].extract()
+        #strUrl = ''.join(urlList)
+
         urlList   = response.xpath('//*[@id="hot_list"]/dl/dd[2]/ul/li[1]/div/h5/a//@href')[0].extract()
-        strUrl = ''.json(urlList)
+        strUrl = ''.join(urlList)
         print('\n')
         print(strTitle)
         print(strUrl+'\n')

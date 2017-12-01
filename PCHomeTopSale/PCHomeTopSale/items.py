@@ -14,4 +14,3 @@ class PchometopsaleItem(scrapy.Item):
     title = scrapy.Field()
     link = scrapy.Field()
     price = scrapy.Field()
-    
